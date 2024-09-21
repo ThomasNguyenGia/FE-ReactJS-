@@ -1,33 +1,50 @@
 import React from "react";
-import { Heading1, IntroductionContainer, ListItem, Paragraph, UnorderedList } from "./style";
+import { Heading1, IntroductionContainer, ListItem, Paragraph, StyledLink, UnorderedList, WrapperTypeProduct } from "./style";
+import { Link } from 'react-router-dom';
 
 const AboutUsPage =() => {
+    const arr = [
+        { name: 'Trang chủ', path: '/' },
+        { name: 'Hoa', path: '/products' },
+        { name: 'Giới thiệu', path: '/about-us' }
+    ];
     return (
-        <IntroductionContainer>
-            <Heading1>Chào mừng bạn đến với Travlog - Khám Phá Thế Giới!</Heading1>
+        <>
+            <div style={{ width: '1270px', margin: '0 auto' }}>
+                <WrapperTypeProduct>
+                    {arr.map((item) => (
+                        <StyledLink to={item.path} key={item.name}>
+                            {item.name}
+                        </StyledLink>
+                    ))}
+                </WrapperTypeProduct>
+            </div>
+            <IntroductionContainer>
+            <Heading1>Chào mừng bạn đến với Green Shop - Nơi Sắc Hoa Tỏa Sáng!</Heading1>
             <Paragraph>
-                Travlog là điểm đến trực tuyến độc đáo dành cho những người yêu thích khám phá và trải nghiệm văn hóa, ẩm thực, và cảnh đẹp tuyệt vời của các điểm đến nước ngoài. Với sứ mệnh mang đến trải nghiệm du lịch đa chiều và đầy đủ, chúng tôi tự hào giới thiệu không gian trực tuyến độc đáo, nơi bạn có thể bắt đầu hành trình khám phá thế giới từ ngay hôm nay.
+                Green Shop là địa điểm lý tưởng dành cho những ai yêu hoa và muốn mang thiên nhiên vào cuộc sống hàng ngày. Với sứ mệnh làm đẹp không gian sống và mang lại niềm vui từ sắc hoa tươi, chúng tôi tự hào cung cấp những bó hoa tuyệt đẹp và dịch vụ chăm sóc khách hàng tận tâm.
             </Paragraph>
             <Paragraph>
-                Tại sao chọn Travlog?
+                Tại sao chọn Green Shop?
             </Paragraph>
             <UnorderedList>
-                <ListItem>1. Đa dạng điểm đến: Travlog cung cấp thông tin đầy đủ về hàng loạt các điểm đến hấp dẫn trên khắp thế giới. Từ những thành phố sôi động, bãi biển tuyệt vời đến những thị trấn nhỏ xinh, chúng tôi đưa bạn đến những địa điểm đa dạng và thú vị nhất trên hành tinh.</ListItem>
-                <ListItem>2. Chi tiết tour chi tiết: Travlog mang đến cho bạn những thông tin chi tiết về các tour du lịch, bao gồm lịch trình, giá cả, và những điểm đặc sắc mà bạn không thể bỏ qua. Với những đề xuất chân thực từ cộng đồng du lịch, bạn có thể chọn lựa những hành trình phù hợp với sở thích và mong muốn của mình.</ListItem>
-                <ListItem>3. Đánh Giá và Nhận Xét Chất Lượng: Travlog giúp bạn đưa ra quyết định thông minh bằng cách cung cấp đánh giá và nhận xét từ cộng đồng du khách. Đọc những đánh giá chân thực để chọn lựa chỗ ở, nhà hàng, và hoạt động phù hợp với mong muốn của bạn.</ListItem>
-                <ListItem>4. Hình ảnh và video tuyệt vời: Đắm chìm trong vẻ đẹp của các điểm đến thông qua bộ sưu tập ảnh và video chất lượng cao trên Travlog. Chúng tôi tin rằng hình ảnh là cách tốt nhất để làm sống lại những trải nghiệm du lịch.</ListItem>
+                <ListItem>1. Đa dạng các loại hoa: Green Shop mang đến sự phong phú với nhiều loại hoa khác nhau từ hoa tươi hàng ngày, hoa bó, đến các lẵng hoa trang trí đặc biệt cho các dịp lễ, sự kiện và kỷ niệm.</ListItem>
+                <ListItem>2. Thiết kế sáng tạo và tinh tế: Các bó hoa tại Green Shop được tạo ra bởi những bàn tay nghệ nhân với sự sáng tạo không ngừng, giúp bạn gửi gắm thông điệp yêu thương một cách tinh tế nhất.</ListItem>
+                <ListItem>3. Dịch vụ giao hoa nhanh chóng: Green Shop đảm bảo dịch vụ giao hoa nhanh chóng và đúng hẹn, mang đến sự hài lòng tuyệt đối cho khách hàng, dù bạn ở bất kỳ đâu trong thành phố.</ListItem>
+                <ListItem>4. Tư vấn chuyên nghiệp: Đội ngũ nhân viên nhiệt tình và giàu kinh nghiệm luôn sẵn sàng lắng nghe và tư vấn để bạn có thể lựa chọn được những bó hoa phù hợp với nhu cầu và ngân sách.</ListItem>
             </UnorderedList>
             <Paragraph>
-                Cuối cùng, Travlog là không gian dành cho những người dũng cảm muốn mở rộng tầm nhìn và khám phá những điều mới mẻ. Hãy cùng chúng tôi tạo ra những kí ức khó quên, chia sẻ những câu chuyện độc đáo của bạn, và kết nối với những người chia sẻ cùng niềm đam mê du lịch.
+                Green Shop tin rằng mỗi bông hoa đều mang một thông điệp riêng, và chúng tôi muốn giúp bạn chia sẻ những thông điệp đó với những người thân yêu. Hãy để chúng tôi đồng hành cùng bạn trong những khoảnh khắc đặc biệt và góp phần làm cho cuộc sống thêm phần tươi đẹp.
             </Paragraph>
             <Paragraph>
-                Hãy bắt đầu hành trình của bạn ngay bây giờ trên Travlog. Chúng tôi tin rằng mỗi hành trình là một cơ hội để khám phá, học hỏi và tận hưởng những điều tuyệt vời nhất mà thế giới có thể mang đến. Cùng nhau, chúng ta có thể tạo ra một cộng đồng du lịch độc đáo, nơi mà mỗi người đều có thể tìm thấy nguồn cảm hứng mới.
+                Hãy ghé thăm Green Shop để khám phá thế giới hoa tuyệt vời. Chúng tôi cam kết mang lại sự hài lòng qua từng bó hoa, từng dịch vụ và từng nụ cười.
             </Paragraph>
             <Paragraph>
-                Travlog - Nơi bắt đầu cho mỗi cuộc phiêu lưu, mỗi câu chuyện du lịch và mỗi đám mây mới trên bản đồ. Hãy đồng hành cùng chúng tôi trên con đường khám phá thế giới!
+                Green Shop - Nơi hoa tươi kể chuyện và cảm xúc lan tỏa!
             </Paragraph>
         </IntroductionContainer>
+        </>
     );
 }
 
-export default AboutUsPage
+export default AboutUsPage;

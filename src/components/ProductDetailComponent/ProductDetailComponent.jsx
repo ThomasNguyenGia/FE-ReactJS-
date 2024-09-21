@@ -1,7 +1,7 @@
 import { Col, Image, InputNumber, Row } from "antd";
 import React from "react";
 import imageProduct from "../../assets/images/detail_flower.webp";
-import imageProductSmall from "../../assets/images/imagesmall.webp"
+import imageProductSmall from "../../assets/images/small_flower.png"
 import { WrapperAddressProduct, WrapperBtnQualityProduct, WrapperInputNumber, WrapperPriceProduct, WrapperPriceTextProduct, WrapperQualityProduct, WrapperStyleColImage, WrapperStyleImageSmall, WrapperStyleNameProduct, WrapperStyleTextSell } from "./style";
 import {StarFilled, PlusOutlined, MinusOutlined} from "@ant-design/icons";
 import ButtonComponent from "../ButtonComponent/ButtonComponent";

@@ -49,7 +49,6 @@ export const FooterQuickLinks = styled.ul`
             
             &:hover {
                 color: var(--heading-color);
-                text-decoration: underline;
             }
         }
     }
